@@ -1,0 +1,55 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "import", "react", "react-hooks", "nextjs", "jsx-a11y"],
+  "categories": {},
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "eqeqeq": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/consistent-type-imports": "warn",
+    "import/consistent-type-specifier-style": "error",
+    "react/no-children-prop": "off"
+  },
+  "overrides": [
+    {
+      "files": ["apps/tanstack-start/**", "apps/expo/**", "packages/**", "tooling/**"],
+      "rules": {
+        "nextjs/no-head-element": "off"
+      }
+    }
+  ],
+  "settings": {
+    "next": {
+      "rootDir": ["apps/nextjs"]
+    },
+    "react": {
+      "formComponents": [],
+      "linkComponents": [],
+      "version": null,
+      "componentWrapperFunctions": []
+    },
+    "jsx-a11y": {
+      "polymorphicPropName": null,
+      "components": {},
+      "attributes": {}
+    }
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    ".turbo",
+    ".next",
+    ".expo",
+    ".nitro",
+    ".output",
+    ".tanstack",
+    "coverage",
+    "**/*.config.*"
+  ]
+}

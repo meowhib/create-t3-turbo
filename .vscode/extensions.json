@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
+    "nicolo-ribaudo.vscode-oxc",
     "expo.vscode-expo-tools",
     "esbenp.prettier-vscode",
     "yoavbls.pretty-ts-errors",

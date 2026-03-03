@@ -18,9 +18,11 @@
       "outputs": [".cache/.prettiercache"],
       "outputLogs": "new-only"
     },
-    "lint": {
-      "dependsOn": ["^topo", "^build"],
-      "outputs": [".cache/.eslintcache"]
+    "//#lint": {
+      "inputs": ["**/*.{js,ts,tsx,jsx}", ".oxlintrc.json"]
+    },
+    "//#lint:fix": {
+      "cache": false
     },
     "typecheck": {
       "dependsOn": ["^topo", "^build"],
